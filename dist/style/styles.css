@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+}
+
+/* NAVBAR SECTION */
+.nav {
+  position: fixed;
+  top: 0;
+  background-color: #fff;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 75px;
+  width: 100%;
+  z-index: 1;
+}
+
+.tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.tabList {
+  list-style: none;
+}
+
+.tabLink,
+.navBtn {
+  text-decoration: none;
+  font-size: 1rem;
+  color: black;
+  text-transform: uppercase;
+}
+
+.logoContainer h1 {
+  font-family: "Cedarville Cursive", cursive;
+  color: darkgreen;
+  font-size: 2.5rem;
+}
+
+/* GLOBAL BUTTON */
+
+.btn {
+  border: none;
+  background-color: yellow;
+  padding: 7px 16px 5px;
+  border-radius: 50px;
+  display: flex;
+  text-align: center;
+  font-size: 1rem;
+}
+
+/* HERO SECTION */
+
+.hero-container {
+  background-image: url(/dist/img/hero.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+  padding: 50px;
+  position: relative;
+  display: none;
+}
+
+.hero-container h3 {
+  color: #fff;
+  font-size: 3.5rem;
+  position: absolute;
+  font-weight: 300;
+  bottom: 160px;
+  text-transform: uppercase;
+  width: 700px;
+}
+
+.hero-container button {
+  position: absolute;
+  bottom: 90px;
+}
+
+.heroBtn {
+  padding: 15px 60px 13px;
+  text-decoration: none;
+  color: #000;
+  text-transform: uppercase;
+  font-size: 1rem;
+}
+
+/* MENU SECTION */
+
+.menu {
+  padding: 20px;
+  /* overflow-y: hidden; */
+  /* display: none; */
+}
+
+.menu h3 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 20px;
+  height: 200px;
+}
+
+.meal-day-container {
+  margin-bottom: 20px;
+}
+
+.meal-container {
+  /* background-color: red; */
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.meal {
+  /* background-color: red; */
+  flex-wrap: wrap;
+  width: 430px;
+  margin-bottom: 20px;
+}
+
+.meal-day,
+.food-name {
+  text-transform: uppercase;
+  font-size: 2rem;
+  font-weight: 300;
+  margin-bottom: 10px;
+}
+
+.food-description {
+  font-size: 1.2rem;
+  font-weight: 300;
+  text-align: justify;
+  /* background-color: green; */
+}
+
+.img-container img {
+  border-radius: 1.2rem;
+  width: 430px;
+  height: 500px;
+}
