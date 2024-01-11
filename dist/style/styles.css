@@ -71,7 +71,7 @@
   height: 100vh;
   padding: 50px;
   position: relative;
-  display: none;
+  /* display: none; */
 }
 
 .hero-container h3 {
