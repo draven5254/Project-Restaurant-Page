@@ -2,6 +2,7 @@
 
 import { createHome } from "./home";
 import { createMenu } from "./menu";
+import { createContact } from "./contact";
 
 function createNav() {
   const nav = document.createElement("nav");
@@ -26,6 +27,7 @@ function createNav() {
   tabLink1.classList.add("tabLink");
   tabLink1.href = "#";
   tabLink1.textContent = "Home";
+  tabLink1.addEventListener("click", () => {});
 
   const tabLink2 = document.createElement("a");
   tabLink2.classList.add("tabLink");
@@ -71,12 +73,27 @@ function createNav() {
   return nav;
 }
 
+function createFooter() {
+  const footer = document.createElement("div");
+  footer.classList.add("footer");
+
+  const copyRight = document.createElement("p");
+  copyRight.classList.add("copy-right");
+  copyRight.textContent = "Copyright © 2024 Draven5254";
+
+  footer.appendChild(copyRight);
+
+  return footer;
+}
+
 export function getParentElement() {
   const contentDiv = document.getElementById("content");
 
   contentDiv.appendChild(createHome());
   contentDiv.appendChild(createNav());
   contentDiv.appendChild(createMenu());
+  contentDiv.appendChild(createContact());
+  contentDiv.appendChild(createFooter());
 }
 
 export default getParentElement;
