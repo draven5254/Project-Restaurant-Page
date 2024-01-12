@@ -44,7 +44,7 @@
 
 .logoContainer h1 {
   font-family: "Cedarville Cursive", cursive;
-  color: darkgreen;
+  color: #006400;
   font-size: 2.5rem;
 }
 
@@ -52,7 +52,7 @@
 
 .btn {
   border: none;
-  background-color: yellow;
+  background-color: #ffff00;
   padding: 7px 16px 5px;
   border-radius: 50px;
   display: flex;
@@ -102,7 +102,7 @@
 .menu {
   padding: 20px;
   /* overflow-y: hidden; */
-  /* display: none; */
+  display: none;
 }
 
 .menu h3 {
@@ -142,6 +142,14 @@
   margin-bottom: 10px;
 }
 
+.food-name {
+  cursor: pointer;
+}
+
+.food-name:hover {
+  color: #ffff00;
+}
+
 .food-description {
   font-size: 1.2rem;
   font-weight: 300;
@@ -153,4 +161,51 @@
   border-radius: 1.2rem;
   width: 430px;
   height: 500px;
+}
+
+/* CONTACT SECTION */
+
+.contact {
+  text-align: center;
+  padding: 20px;
+  height: 100vh;
+  display: none;
+}
+
+.contact h3 {
+  font-size: 2.5rem;
+  text-transform: uppercase;
+  font-weight: 400;
+  padding: 80px 20px 50px 20px;
+}
+
+.contact-img {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #808080;
+  border-radius: 20px;
+  gap: 20px;
+}
+
+.contact-img img {
+  height: 350px;
+  width: 350px;
+  margin: 50px;
+  border-radius: 10px;
+}
+
+.location p {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  display: flex;
+}
+
+/* FOOTER SECTION */
+
+.footer {
+  background-color: #808080;
+  padding: 20px;
+  text-align: center;
+  color: #fff;
 }
