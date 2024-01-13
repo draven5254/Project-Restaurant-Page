@@ -1,5 +1,5 @@
 "use strict";
 
-import { getParentElement } from "./page-load";
+import getParentElement from "./page-load";
 
 getParentElement();
