@@ -1,11 +1,21 @@
 "use strict";
 
-export function createContact() {
+import createFooter from "./footer";
+
+export default function createContact() {
+  const contentDiv = document.getElementById("content");
+
   const contact = document.createElement("div");
   contact.classList.add("contact");
 
+  const contactContent = document.createElement("div");
+  contactContent.classList.add("contact-content");
+
+  const pageContent = document.createElement("div");
+  pageContent.classList.add("page-content");
+
   const paragraph = document.createElement("h3");
-  paragraph.textContent = "find lutong bahay restaurant near you";
+  paragraph.textContent = "find celestial eats restaurant near you";
 
   const imgContainer = document.createElement("div");
   imgContainer.classList.add("contact-img");
@@ -23,13 +33,15 @@ export function createContact() {
   const address = document.createElement("p");
   address.textContent = "Galaxy Milky Way Solar System Earth-616 Philippines";
 
-  contact.appendChild(paragraph);
-  contact.appendChild(imgContainer);
+  contentDiv.appendChild(pageContent);
+  pageContent.appendChild(contact);
+  contact.appendChild(contactContent);
+  contactContent.appendChild(paragraph);
+  contactContent.appendChild(imgContainer);
   imgContainer.appendChild(contactGif);
 
   imgContainer.appendChild(location);
   location.appendChild(number);
   location.appendChild(address);
-
-  return contact;
+  pageContent.appendChild(createFooter());
 }
