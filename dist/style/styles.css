@@ -107,7 +107,7 @@
 /* HERO SECTION */
 
 .hero-container {
-  background-image: url(/dist/img/background-home-desktop.jpg);
+  background-image: url(/background/background-home-desktop.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -119,7 +119,7 @@
   height: 100vh;
   padding: 50px;
   position: relative;
-  cursor: url(/dist/img/rocket.png), auto;
+  cursor: url(/background/rocket.png), auto;
   /* display: none; */
 }
 
@@ -223,8 +223,8 @@
 /* CONTACT SECTION */
 
 .contact {
-  background-image: url(/dist/img/background-destination-desktop.jpg);
-  cursor: url(/dist/img/rocket.png), auto;
+  background-image: url(/background/background-destination-desktop.jpg);
+  cursor: url(/background/rocket.png), auto;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
