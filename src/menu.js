@@ -1,18 +1,28 @@
 "use strict";
 
-export function createMenu() {
+import createFooter from "./footer";
+
+export default function createMenu() {
+  const contentDiv = document.getElementById("content");
+
   // Create the main menu container
   const menu = document.createElement("div");
   menu.classList.add("menu");
 
+  const pageContent = document.createElement("div");
+  pageContent.classList.add("page-content");
+
   // Add the heading
   const heading = document.createElement("h3");
-  heading.textContent = "Fresh, plant-forward, earth friendly food.";
+  heading.textContent = "Fresh earth's friendly food.";
   menu.appendChild(heading);
 
+  contentDiv.appendChild(pageContent);
+  pageContent.appendChild(menu);
   menu.appendChild(createBreakfast());
   menu.appendChild(createLunch());
   menu.appendChild(createDinner());
+  pageContent.appendChild(createFooter());
 
   return menu;
 }
@@ -211,7 +221,7 @@ function createDinner() {
   // Create meal items
   const mealItems = [
     {
-      name: "Ginisang Munggo at Chicharon (Mung Bean Soup with Pork Cracklings)",
+      name: "Ginisang Munggo at Chicharon ",
       description:
         "Mung Bean stew with pork cracklings is hearty and full of flavor for the ultimate comfort food. It's easy to make, budget-friendly, and a great source of protein and fiber.",
       image: "img/img-7.jpeg",
