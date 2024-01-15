@@ -5,8 +5,14 @@ import createFooter from "./footer";
 export default function createContact() {
   const contentDiv = document.getElementById("content");
 
+  const contactImg = document.createElement("img");
+  contactImg.src = "./img/background-destination-desktop.jpg";
+  contactImg.alt = "hero image background";
+
   const contact = document.createElement("div");
   contact.classList.add("contact");
+
+  contact.style.cursor = "url(/dist/img/rocket.png), auto";
 
   const contactContent = document.createElement("div");
   contactContent.classList.add("contact-content");
@@ -35,6 +41,7 @@ export default function createContact() {
 
   contentDiv.appendChild(pageContent);
   pageContent.appendChild(contact);
+  contact.appendChild(contactImg);
   contact.appendChild(contactContent);
   contactContent.appendChild(paragraph);
   contactContent.appendChild(imgContainer);
