@@ -3,6 +3,7 @@
 import createHome from "./home";
 import createMenu from "./menu";
 import createContact from "./contact";
+import createNavButton from "./navButton";
 
 export default function createNav() {
   const contentDiv = document.getElementById("content");
@@ -64,8 +65,8 @@ export default function createNav() {
   const logo = document.createElement("h1");
   logo.textContent = "Celestial Eats";
 
-  const button = document.createElement("button");
-  button.classList = "btn";
+  const btnContainer = document.createElement("div");
+  btnContainer.classList.add("btnContainer");
 
   const navBtn = document.createElement("button");
   navBtn.classList = "navBtn";
@@ -88,9 +89,8 @@ export default function createNav() {
 
   nav.appendChild(logoContainer);
   logoContainer.appendChild(logo);
-
-  nav.appendChild(button);
-  button.appendChild(navBtn);
+  nav.appendChild(btnContainer);
+  btnContainer.appendChild(createNavButton());
 }
 
 function setActive() {
