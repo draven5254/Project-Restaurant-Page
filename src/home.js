@@ -1,16 +1,18 @@
 "use strict";
 
 import createFooter from "./footer";
+import createHomeButton from "./homeButton";
 
 export default function createHome() {
   const contentDiv = document.getElementById("content");
 
-  const heroImg = document.createElement("img");
-  heroImg.src = "/dist/img/background-home-desktop.jpg";
-  heroImg.alt = "hero image background";
+  // const heroImg = document.createElement("img");
+  // heroImg.src = "/dist/img/background-home-desktop.jpg";
+  // heroImg.alt = "hero image background";
 
   const home = document.createElement("div");
   home.classList.add("hero-container");
+  home.style.backgroundImage = "url(/dist/img/background-home-desktop.jpg)";
 
   home.style.cursor = "url(/dist/img/rocket.png), auto";
 
@@ -23,27 +25,18 @@ export default function createHome() {
   const paragraph = document.createElement("h3");
   paragraph.textContent = "The taste of home, in every dish";
 
-  const heroLink = document.createElement("a");
-  heroLink.classList.add("heroBtn");
+  const circle1 = document.createElement("div");
+  circle1.classList.add("circle");
 
-  const linkSpan = document.createElement("span");
-  linkSpan.textContent = "order now";
-
-  // heroLink.addEventListener("mouseover", (e) => {
-  //   const x = e.pageX - heroLink.offsetLeft;
-  //   const y = e.pageY - heroLink.offsetTop;
-
-  //   heroLink.style.setProperty("--xPos", x + "px");
-  //   heroLink.style.setProperty("--yPos", y + "px");
-  // });
+  const circle2 = document.createElement("div");
+  circle2.classList.add("circle");
 
   contentDiv.appendChild(pageContent);
   pageContent.appendChild(home);
-  home.appendChild(heroImg);
   home.appendChild(homeContent);
   homeContent.appendChild(paragraph);
-  homeContent.appendChild(heroLink);
-  // heroBtn.appendChild(heroLink);
-  heroLink.appendChild(linkSpan);
+
+  homeContent.appendChild(createHomeButton());
+
   pageContent.appendChild(createFooter());
 }
