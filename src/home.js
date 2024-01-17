@@ -6,13 +6,13 @@ import createHomeButton from "./homeButton";
 export default function createHome() {
   const contentDiv = document.getElementById("content");
 
-  // const heroImg = document.createElement("img");
-  // heroImg.src = "/dist/img/background-home-desktop.jpg";
-  // heroImg.alt = "hero image background";
+  const heroImg = document.createElement("img");
+  heroImg.src = "/dist/img/background-home-desktop.jpg";
+  heroImg.alt = "hero image background";
 
   const home = document.createElement("div");
   home.classList.add("hero-container");
-  home.style.backgroundImage = "url(/dist/img/background-home-desktop.jpg)";
+  // home.style.backgroundImage = "url(/dist/img/background-home-desktop.jpg)";
 
   home.style.cursor = "url(/dist/img/rocket.png), auto";
 
@@ -33,6 +33,7 @@ export default function createHome() {
 
   contentDiv.appendChild(pageContent);
   pageContent.appendChild(home);
+  home.appendChild(heroImg);
   home.appendChild(homeContent);
   homeContent.appendChild(paragraph);
 
