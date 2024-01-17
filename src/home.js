@@ -7,7 +7,7 @@ export default function createHome() {
   const contentDiv = document.getElementById("content");
 
   const heroImg = document.createElement("img");
-  heroImg.src = "/dist/img/background-home-desktop.jpg";
+  heroImg.src = "./img/background-home-desktop.jpg";
   heroImg.alt = "hero image background";
 
   const home = document.createElement("div");
